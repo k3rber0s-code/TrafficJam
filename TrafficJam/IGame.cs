@@ -11,10 +11,10 @@ namespace TrafficJam
     {
         public int Width { get; set; }
         public List<Car> Cars { get; set; }
-        public Vector2 Exit { get; set; }
+        public Vector2 ExitPosition { get; set; }
         public string MapID { get; set; }
 
-        public Car MoveCar(Car selectedCar, Direction direction);
+        public bool MoveCar(Car selectedCar, Direction direction, out Car movedCar);
         public bool IsGameOver();
         public GameStatus ResetLevel();
         public GameStatus SkipLevel();

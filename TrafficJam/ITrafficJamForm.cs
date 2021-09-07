@@ -8,5 +8,10 @@ namespace TrafficJam
 {
     interface ITrafficJamForm
     {
+        public event EventHandler CarMovedEventHandler;
+        public event EventHandler HelpKeyPressedEventHandler;
+        public event EventHandler ResetKeyPressedEventHandler;
+        public event EventHandler SkipKeyPressedEventHandler;
+        public void AddModel(TrafficJamModel model);
     }
 }
